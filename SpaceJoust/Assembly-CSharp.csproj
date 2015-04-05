@@ -46,11 +46,11 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\CameraController.cs" />
-     <Compile Include="Assets\MultiplayerCameraController.cs" />
-     <Compile Include="Assets\PlayerMovement.cs" />
-     <Compile Include="Assets\SparksDestroy.cs" />
-     <Compile Include="Assets\SwordControls.cs" />
+     <Compile Include="Assets\Scripts\CameraController.cs" />
+     <Compile Include="Assets\Scripts\MultiplayerCameraController.cs" />
+     <Compile Include="Assets\Scripts\PlayerMovement.cs" />
+     <Compile Include="Assets\Scripts\SparksDestroy.cs" />
+     <Compile Include="Assets\Scripts\SwordControls.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
