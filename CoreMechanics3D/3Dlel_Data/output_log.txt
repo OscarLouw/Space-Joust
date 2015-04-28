@@ -1,0 +1,24 @@
+Initialize engine version: 5.0.0f4 (5b98b70ebeb9)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 11.0 [level 10.1]
+    Renderer: ATI Mobility Radeon HD 4500 Series (ID=0x9553)
+    Vendor:   ATI
+    VRAM:     506 MB
+Begin MonoManager ReloadAssembly
+Platform assembly: C:\Users\Oscar\Documents\GitHub\Space-Joust\CoreMechanics3D\3Dlel_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading C:\Users\Oscar\Documents\GitHub\Space-Joust\CoreMechanics3D\3Dlel_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: C:\Users\Oscar\Documents\GitHub\Space-Joust\CoreMechanics3D\3Dlel_Data\Managed\Assembly-CSharp-firstpass.dll (this message is harmless)
+Loading C:\Users\Oscar\Documents\GitHub\Space-Joust\CoreMechanics3D\3Dlel_Data\Managed\Assembly-CSharp-firstpass.dll into Unity Child Domain
+Platform assembly: C:\Users\Oscar\Documents\GitHub\Space-Joust\CoreMechanics3D\3Dlel_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading C:\Users\Oscar\Documents\GitHub\Space-Joust\CoreMechanics3D\3Dlel_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: C:\Users\Oscar\Documents\GitHub\Space-Joust\CoreMechanics3D\3Dlel_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading C:\Users\Oscar\Documents\GitHub\Space-Joust\CoreMechanics3D\3Dlel_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+- Completed reload, in  0.166 seconds
+desktop: 1366x768 60Hz; virtual: 1366x768 at 0,0
+<RI> Initializing input.
+<RI> Input initialized.
+<RI> Initialized touch support.
+Platform assembly: C:\Users\Oscar\Documents\GitHub\Space-Joust\CoreMechanics3D\3Dlel_Data\Managed\System.Core.dll (this message is harmless)
+Setting up 1 worker threads for Enlighten.
+  Thread -> id: 17f4 -> priority: 1 

@@ -3,9 +3,12 @@ using System.Collections;
 
 public class PlayerMovement : MonoBehaviour {
 
+	private int actions;
+	public int maxActions = 4;
+
     public float speed = 2000f;
     public float boostSpeed = 10000f;
-
+	public MeshRenderer[] spheres;
     public KeyCode left = KeyCode.A;
     public KeyCode right = KeyCode.D;
     public KeyCode up = KeyCode.W;
@@ -16,17 +19,56 @@ public class PlayerMovement : MonoBehaviour {
     public Rigidbody sword;
 
     private float invincibleTimer = 0f;
+	private float actionTimer = 1f;
 
 	// Use this for initialization
 	void Start () {
+		actions = maxActions;
         rigidbody = GetComponent<Rigidbody>();
 	}
 	
 	// Update is called once per frame
 	void Update () {
-        if (Input.GetKeyDown(dash) && rigidbody.velocity.magnitude > 1f)
+
+		if (actions >= 4) {
+			spheres [0].enabled = true;
+			spheres [1].enabled = true;
+			spheres [2].enabled = true;
+			spheres [3].enabled = true;
+		} else if (actions == 3) {
+			spheres [0].enabled = false;
+			spheres [1].enabled = true;
+			spheres [2].enabled = true;
+			spheres [3].enabled = true;
+		} else if (actions == 2) {
+			spheres [0].enabled = false;
+			spheres [1].enabled = false;
+			spheres [2].enabled = true;
+			spheres [3].enabled = true;
+		} else if (actions == 1) {
+			spheres [0].enabled = false;
+			spheres [1].enabled = false;
+			spheres [2].enabled = false;
+			spheres [3].enabled = true;
+		} else {
+			spheres[0].enabled = false;
+			spheres[1].enabled = false;
+			spheres[2].enabled = false;
+			spheres[3].enabled = false;
+		}
+
+		actionTimer -= Time.deltaTime;
+		if (actionTimer <= 0) {
+			actionTimer = 1f;
+			if(actions <= maxActions)
+				actions++;
+			Debug.Log(actions);
+		}
+
+        if (Input.GetKeyDown(dash) && rigidbody.velocity.magnitude > 1f && actions > 0)
         {
-            
+			actionTimer = 1f;
+			actions--;
             invincibleTimer = 0.5f;
             rigidbody.detectCollisions = false;
             sword.detectCollisions = false;
@@ -38,8 +80,8 @@ public class PlayerMovement : MonoBehaviour {
         {
             invincibleTimer -= Time.deltaTime;
         }
-        else
-        {
+		else
+		{
             GetComponent<TrailRenderer>().time = 0;
             rigidbody.detectCollisions = true;
             sword.detectCollisions = true;
